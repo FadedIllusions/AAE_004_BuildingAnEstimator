@@ -241,13 +241,13 @@ For this project, you will need to submit:
 
 ## Student's Implementations
 
-###Step 001: Sensor Noise
+### Step 001: Sensor Noise
 In this step, both the GPS and Accelerometer generate a txt data file in ```config/log/Graph1.txt``` and ```config/log/Graph2.txt```, respectively, in reference to the X-axes. After calculating the standard deviation of each, student used those values to update ```config/6_Sensornoise.txt``` appropriately. 
 
-###Step 002: Attitude Estimation
+### Step 002: Attitude Estimation
 Student integrated the current attitude passed into the function to the body rate, updating the predicted roll, pitch, and yaw of the quadrotor.
 
-###Step 003: Prediction Step
+### Step 003: Prediction Step
 Student defined RGBPrime as defined in "Estimation for Quadrotors".
 ![RGBPrime](images/rgb_prime.png)
 
@@ -257,11 +257,11 @@ In the predict() we take the Jacobian of gPrime.
 Then, we use gPrime to calculate the covariance matrix:
 ```ekfCov = gPrime * ekfCov * gPrime.transpose() + Q;```
 
-###Step 004:
+### Step 004: Magnetometer Update
 Student took difference between measured and estimated yaw -- the z-error and divided update scenarios so as not to take long way around circle. Then, student updated hPrime.
 ![mag_update](images/mag_update.png)
 
-Step 005:
+### Step 005: Closed Loop + GPS Update
 Student took h(xt) so that xt,x; xt,y; xt,z; xt,x_dot... Then, the partial derivative is a matrix in row echelon form with the last column equal to 0.
 ![gps_update](images/gps_update.png)
 
