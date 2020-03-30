@@ -258,7 +258,7 @@ Then, we use gPrime to calculate the covariance matrix:
 ```ekfCov = gPrime * ekfCov * gPrime.transpose() + Q;```
 
 ### Step 004: Magnetometer Update
-Student took difference between measured and estimated yaw -- the z-error and divided update scenarios so as not to take long way around circle. Then, student updated hPrime.
+Student took difference between measured and estimated yaw, the z-error and divided update scenarios so as not to take long way around circle. Then, student updated hPrime.
 ![mag_update](images/mag_update.png)
 
 ### Step 005: Closed Loop + GPS Update
