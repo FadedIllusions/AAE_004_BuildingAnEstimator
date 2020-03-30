@@ -147,13 +147,13 @@ Looking at this result, you can see that in the first part of the plot, our cova
 
 If we look at an example with a `QPosXYStd` that is much too high (shown below), we can see that the covariance no longer grows in the same way as the data.
 
-![bad x covariance](images/bad-x-sigma.PNG)
+![bad x covariance](images/bad-x-sigma.png)
 
 Another set of bad examples is shown below for having a `QVelXYStd` too large (first) and too small (second).  As you can see, once again, our covariances in these cases no longer model the data well.
 
-![bad vx cov large](images/bad-vx-sigma.PNG)
+![bad vx cov large](images/bad-vx-sigma.png)
 
-![bad vx cov small](images/bad-vx-sigma-low.PNG)
+![bad vx cov small](images/bad-vx-sigma-low.png)
 
 ***Success criteria:*** *This step doesn't have any specific measurable criteria being checked.*
 
