@@ -248,10 +248,12 @@ In this step, both the GPS and Accelerometer generate a txt data file in ```conf
 Student integrated the current attitude passed into the function to the body rate, updating the predicted roll, pitch, and yaw of the quadrotor.
 
 ### Step 003: Prediction Step
-Student defined RGBPrime as defined in "Estimation for Quadrotors".
+Student defined RGBPrime as defined in [Estimation for Quadrotors](https://www.overleaf.com/read/vymfngphcccj).
+
 ![RGBPrime](images/rgb_prime.png)
 
 In the predict() we take the Jacobian of gPrime.
+
 ![GPrime](images/gprime_jacobian.png)
 
 Then, we use gPrime to calculate the covariance matrix:
@@ -259,10 +261,12 @@ Then, we use gPrime to calculate the covariance matrix:
 
 ### Step 004: Magnetometer Update
 Student took difference between measured and estimated yaw, the z-error and divided update scenarios so as not to take long way around circle. Then, student updated hPrime.
+
 ![mag_update](images/mag_update.png)
 
 ### Step 005: Closed Loop + GPS Update
 Student took h(xt) so that xt,x; xt,y; xt,z; xt,x_dot... Then, the partial derivative is a matrix in row echelon form with the last column equal to 0.
+
 ![gps_update](images/gps_update.png)
 
 
